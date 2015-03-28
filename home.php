@@ -33,4 +33,4 @@
         </div>
 
 <?
-    require_once("rodape.html");
+    require_once("rodape.php");

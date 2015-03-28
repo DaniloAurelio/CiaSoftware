@@ -1,10 +1,10 @@
 <?php
 require_once("topo.html");
 
-$nome=$_POST['nome'];
-$email=$_POST['email'];
-$assunto=$_POST['assunto'];
-$mensagem=$_POST['mensagem'];
+$nome=filter_input(INPUT_POST, 'nome');
+$email=filter_input(INPUT_POST, 'email');
+$assunto=filter_input(INPUT_POST, 'assunto');
+$mensagem=filter_input(INPUT_POST, 'mensagem');
 
 if(isset($nome)){
     ?>
@@ -67,4 +67,4 @@ if(isset($nome)){
     </form>
 
 <?
-require_once("rodape.html");
+require_once("rodape.php");

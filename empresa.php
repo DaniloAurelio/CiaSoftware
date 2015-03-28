@@ -26,4 +26,4 @@ require_once("topo.html");
 
 
 <?
-require_once("rodape.html");
+require_once("rodape.php");
