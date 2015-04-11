@@ -2,11 +2,20 @@
 ini_set('display_errors', true);
 error_reporting(E_ALL);
 
-$pagina= filter_input(INPUT_GET, 'pg');
+function verificaRota($rota){
+   $paginas =array("home","empresa","produtos","servicos","contato");
 
-if($pagina=='home' or $pagina=='empresa' or $pagina=='produtos' or $pagina=='contato' or $pagina=='servicos'){
-    require_once($pagina.".php");
-}else{
-    require_once("home.php");
+    if(in_array($rota,$paginas)){
+        require_once($rota.".php");
+    }else{
+        require_once("404.php");
+    }
 }
+
+
+$rota = parse_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+$patch = str_replace("/","",$rota['path']);
+
+verificaRota($patch);
+#$pagina= filter_input(INPUT_GET, 'pg');
 ?>
