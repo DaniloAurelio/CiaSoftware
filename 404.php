@@ -1,9 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mmm
- * Date: 11/04/2015
- * Time: 11:54
- */
+header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
 
-ECHO "404 - Página não encontrada.";
+echo utf8_decode("Página não encontrada");
+
