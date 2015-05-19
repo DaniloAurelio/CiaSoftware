@@ -1,4 +1,5 @@
 <?php
+require_once("./config/database.php");
 require_once("topo.html");
 
 $nome=filter_input(INPUT_POST, 'nome');
@@ -22,9 +23,7 @@ if(isset($nome)){
 
     <form method="post" action="contato.php" class="form-control-static" style="margin-left:20px" >
         <fieldset>
-
-
-            <legend>Contato</legend>
+           <legend>Contato</legend>
 
              <div class="control-group">
                 <label class="control-label" for="nome">Nome</label>
@@ -65,6 +64,6 @@ if(isset($nome)){
 
         </fieldset>
     </form>
-
-<?
+<?php
 require_once("rodape.php");
+?>
